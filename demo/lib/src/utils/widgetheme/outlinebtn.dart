@@ -3,19 +3,27 @@ import 'package:flutter/material.dart';
 class TOutlineBtn {
   static OutlinedButtonThemeData loutlinetheme = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
+      textStyle: TextStyle(color: Colors.black),
       padding: EdgeInsets.all(18),
       elevation: 2.4,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(0),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(19),
+          bottomRight: Radius.circular(19),
+        ),
       ),
     ),
   );
   static OutlinedButtonThemeData doutlinetheme = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
       padding: EdgeInsets.all(18),
+      // textStyle: TextStyle(color: Colors.black),
       elevation: 2.4,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(0),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(19),
+          bottomRight: Radius.circular(19),
+        ),
       ),
     ),
   );

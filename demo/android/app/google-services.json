@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "847961340434",
+    "project_id": "phonenoproject",
+    "storage_bucket": "phonenoproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847961340434:android:eb01190e04df5619b836cb",
+        "android_client_info": {
+          "package_name": "com.example.demo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD66zngE7GG33xk4LO1vbxNO2l4l7XiQB0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

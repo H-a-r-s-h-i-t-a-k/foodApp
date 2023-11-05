@@ -1,5 +1,4 @@
 import 'package:demo/src/features/auth/screens/splash/splash.dart';
-import 'package:demo/src/features/auth/screens/start/Ascreen.dart';
 import 'package:demo/src/features/home/hscreen.dart';
 import 'package:demo/src/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
@@ -30,9 +29,9 @@ Gradient dgradiant = RadialGradient(
   stops: [0.0, 0.7, 1.0],
 );
 final ColorScheme lColorScheme = ColorScheme.fromSwatch(
-    primarySwatch: Colors.orange, brightness: Brightness.light);
+    primarySwatch: Colors.amber, brightness: Brightness.light);
 final ColorScheme dColorScheme = ColorScheme.fromSwatch(
-    primarySwatch: Colors.brown, brightness: Brightness.dark);
+    primarySwatch: Colors.blue, brightness: Brightness.dark);
 void main() {
   runApp(const FoodApp());
 }
@@ -43,7 +42,7 @@ class FoodApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: "Row Chinese",
       debugShowCheckedModeBanner: false,
       theme: Apptheme.lighttheme,

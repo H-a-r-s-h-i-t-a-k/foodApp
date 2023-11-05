@@ -59,7 +59,7 @@ class Phone_noAuth extends StatelessWidget {
                       CustomtextFeild(
                           controller: name_controller,
                           customicon: Icon(Icons.person),
-                          hintText: "Name",
+                          text: "Name",
                           obscureText: false),
                       SizedBox(
                         height: 15,
@@ -67,16 +67,17 @@ class Phone_noAuth extends StatelessWidget {
                       CustomtextFeild(
                           controller: email_controller,
                           customicon: Icon(Icons.phone_android),
-                          hintText: "Phone Number",
+                          text: "Phone Number",
                           obscureText: false),
                       SizedBox(
                         height: 15,
                       ),
                       CustomtextFeild(
-                          controller: email_controller,
-                          customicon: Icon(Icons.email),
-                          hintText: "Email",
-                          obscureText: false),
+                        controller: email_controller,
+                        customicon: Icon(Icons.email),
+                        obscureText: false,
+                        text: "Email",
+                      ),
                       SizedBox(
                         height: 15,
                       ),

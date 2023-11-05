@@ -24,7 +24,7 @@ class Apptheme {
       backgroundColor: dColorScheme.primary.withOpacity(0.7),
       foregroundColor: dColorScheme.primaryContainer.withOpacity(0.9),
     ),
-    outlinedButtonTheme: TOutlineBtn.loutlinetheme,
+    outlinedButtonTheme: TOutlineBtn.doutlinetheme,
     elevatedButtonTheme: TElevatedbtn.delevattheme,
     textTheme: ttextTheme.dtexttheme,
   );
@@ -44,7 +44,7 @@ class Apptheme {
         horizontal: 10,
       ),
     ),
-    outlinedButtonTheme: TOutlineBtn.doutlinetheme,
+    outlinedButtonTheme: TOutlineBtn.loutlinetheme,
     elevatedButtonTheme: TElevatedbtn.lelevattheme,
     textTheme: ttextTheme.ltexttheme,
   );

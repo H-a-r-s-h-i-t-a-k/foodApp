@@ -1,10 +1,15 @@
+import 'package:demo/src/commonWiget/customAnimation/UpwardAnimationWidget.dart';
+import 'package:demo/src/commonWiget/customAnimation/UpwardAnimationmodel.dart';
 import 'package:demo/src/constants/colors.dart';
 import 'package:demo/src/constants/image_str.dart';
 import 'package:demo/src/constants/sizes.dart';
 import 'package:demo/src/constants/text_str.dart';
-import 'package:demo/src/features/auth/screens/login.dart';
-import 'package:demo/src/features/auth/widget/phone/phone_no.dart';
+import 'package:demo/src/features/auth/screens/login/login_screen.dart';
+import 'package:demo/src/features/auth/screens/signin/signin_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../../../../commonWiget/customAnimation/UpwardAnimationcontroller.dart';
 
 class AuthScreen extends StatefulWidget {
   AuthScreen({super.key});
@@ -14,30 +19,30 @@ class AuthScreen extends StatefulWidget {
 }
 
 class _AuthScreenState extends State<AuthScreen> {
-  bool isClick = true;
-  bool animate = false;
-  @override
-  void initState() {
-    Future.delayed(Duration(milliseconds: 500));
-    animate = true;
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(UpwardAnimationController());
+    controller.startAuthAnimate();
+
     var isDark = MediaQuery.of(context).platformBrightness == Brightness.dark;
     var height = MediaQuery.of(context).size.height;
-    // Widget currentScreen = LoginScreen();
-    // Widget currentScreen = isClick ? const AuthScreen() : Phone_noAuth();
     return Scaffold(
-      backgroundColor: isDark ? mDarkColor : mPrimaryColor,
+      backgroundColor: isDark ? mDarkColor : Colors.white,
       body: Stack(
         children: [
-          AnimatedPositioned(
-            // bottom: animate ? ,
-            duration: Duration(milliseconds: 1600),
+          UpwardAnimation(
+            durationInMls: 1300,
+            animPosition: CAnimatedposition(
+                bottomAfter: 0,
+                bottomBefore: -600,
+                leftAfter: 0,
+                leftBefore: 0,
+                rightAfter: 0,
+                rightBefore: 0,
+                topAfter: 0,
+                topBefore: 0),
             child: Container(
-              padding: EdgeInsets.all(mDefaultSize),
+              padding: const EdgeInsets.all(mDefaultSize),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -65,10 +70,12 @@ class _AuthScreenState extends State<AuthScreen> {
                     children: [
                       Expanded(
                         child: OutlinedButton(
-                          onPressed: () {},
+                          onPressed: () => Get.to(() => loginScreen()),
                           child: Text(
                             "login".toUpperCase(),
-                            style: Theme.of(context).textTheme.labelLarge,
+                            style: isDark
+                                ? Theme.of(context).textTheme.labelLarge
+                                : TextStyle(color: Colors.black),
                           ),
                           style: Theme.of(context).outlinedButtonTheme.style,
                         ),
@@ -78,7 +85,7 @@ class _AuthScreenState extends State<AuthScreen> {
                       ),
                       Expanded(
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () => Get.to(() => SigninScreen()),
                           child: Text(
                             "Signup".toUpperCase(),
                             style: Theme.of(context).textTheme.labelLarge,

@@ -35,6 +35,7 @@ dependencies:
   google_fonts: ^6.1.0
   flutter_native_splash: ^2.3.3
   get: ^4.6.6
+  firebase_core: ^2.21.0
 
 dev_dependencies:
   flutter_test:
@@ -42,14 +43,15 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
 flutter_native_splash:
-  color: "#f7f6f1"
+  color: "#f5b038"
   color_dark: "#272727"
   image: assets/images/lg1.png
   image_dark: assets/images/lg1.png
 
   android_12:
     image: assets/images/lg1.png
-    icon_background_color: "#f7f6f1"
+    icon_background_color: "#f5b038"
+    # icon_background_color: "#f7f6f1"
     image_dark: assets/images/lg1.png
     icon_background_color_dark: "#272727"
 

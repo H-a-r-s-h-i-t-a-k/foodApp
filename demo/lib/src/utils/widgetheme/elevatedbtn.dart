@@ -1,5 +1,6 @@
 import 'package:demo/main.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TElevatedbtn {
   static ElevatedButtonThemeData lelevattheme = ElevatedButtonThemeData(
@@ -12,7 +13,10 @@ class TElevatedbtn {
       // backgroundColor: Color.fromARGB(239, 251, 251, 255),
       elevation: 2.4,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(0),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(19),
+          bottomRight: Radius.circular(19),
+        ),
       ),
     ),
   );
@@ -20,12 +24,15 @@ class TElevatedbtn {
   static ElevatedButtonThemeData delevattheme = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       padding: EdgeInsets.all(18),
-      foregroundColor: Color.fromARGB(255, 53, 165, 156),
+      foregroundColor: Color.fromARGB(255, 225, 235, 234),
       backgroundColor: Color.fromARGB(255, 220, 129, 18),
       surfaceTintColor: lColorScheme.shadow,
       elevation: 2.4,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(0),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(19),
+          bottomRight: Radius.circular(19),
+        ),
       ),
     ),
   );
