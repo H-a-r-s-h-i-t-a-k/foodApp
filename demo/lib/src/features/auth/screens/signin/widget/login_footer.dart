@@ -38,7 +38,7 @@ class SigninFooter extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: mDefaultSize - 10,
+          height: mDefaultSize - 30,
         ),
         SizedBox(
           width: double.infinity,

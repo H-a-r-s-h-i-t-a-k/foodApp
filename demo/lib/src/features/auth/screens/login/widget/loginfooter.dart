@@ -5,7 +5,6 @@ import '../../../../../constants/sizes.dart';
 
 class LoginFooter extends StatelessWidget {
   const LoginFooter({
-    super.key,
     required this.sizeh,
   });
 
@@ -17,7 +16,7 @@ class LoginFooter extends StatelessWidget {
       // crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         SizedBox(
-          height: mDefaultSize - 10,
+          height: mDefaultSize - 30,
         ),
         SingleChildScrollView(
           child: Row(
@@ -41,7 +40,7 @@ class LoginFooter extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: mDefaultSize - 10,
+          height: mDefaultSize - 30,
         ),
         SizedBox(
           width: double.infinity,
@@ -68,7 +67,7 @@ class LoginFooter extends StatelessWidget {
                 ),
                 TextSpan(
                   text: "Signup".toUpperCase(),
-                  style: Theme.of(context).textTheme.bodyLarge,
+                  style: Theme.of(context).textTheme.labelLarge,
                 ),
               ],
             ),

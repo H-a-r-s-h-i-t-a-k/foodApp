@@ -85,6 +85,7 @@ class _AuthScreenState extends State<AuthScreen> {
                       ),
                       Expanded(
                         child: ElevatedButton(
+                          // onPressed: () {},
                           onPressed: () => Get.to(() => SigninScreen()),
                           child: Text(
                             "Signup".toUpperCase(),

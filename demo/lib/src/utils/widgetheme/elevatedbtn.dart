@@ -24,8 +24,8 @@ class TElevatedbtn {
   static ElevatedButtonThemeData delevattheme = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       padding: EdgeInsets.all(18),
-      foregroundColor: Color.fromARGB(255, 225, 235, 234),
-      backgroundColor: Color.fromARGB(255, 220, 129, 18),
+      // foregroundColor: Color.fromARGB(255, 225, 235, 234),
+      backgroundColor: Color.fromARGB(255, 252, 139, 2),
       surfaceTintColor: lColorScheme.shadow,
       elevation: 2.4,
       shape: RoundedRectangleBorder(

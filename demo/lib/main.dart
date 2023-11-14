@@ -1,10 +1,13 @@
+import 'package:demo/firebase_options.dart';
+import 'package:demo/src/Adminfeatures/ahome/ahome.dart';
 import 'package:demo/src/features/auth/screens/splash/splash.dart';
-import 'package:demo/src/features/home/hscreen.dart';
+import 'package:demo/src/features/home/screen/home/home.dart';
+import 'package:demo/src/repository/auth_repo/authentication_repo.dart';
 import 'package:demo/src/utils/theme/theme.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
-
-// import 'auth/Ascreen.dart';
 
 Gradient lgradiant = RadialGradient(
   radius: 3.0,
@@ -29,10 +32,18 @@ Gradient dgradiant = RadialGradient(
   stops: [0.0, 0.7, 1.0],
 );
 final ColorScheme lColorScheme = ColorScheme.fromSwatch(
-    primarySwatch: Colors.amber, brightness: Brightness.light);
+    primarySwatch: Colors.blue, brightness: Brightness.light);
 final ColorScheme dColorScheme = ColorScheme.fromSwatch(
-    primarySwatch: Colors.blue, brightness: Brightness.dark);
+    primarySwatch: Colors.amber, brightness: Brightness.dark);
 void main() {
+  // WidgetsFlutterBinding.ensureInitialized();
+
+  // Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform).then(
+  //   (value) => Get.put(
+  //     AuthenticationRepo(),
+  //   ),
+  // );
+
   runApp(const FoodApp());
 }
 
@@ -46,14 +57,11 @@ class FoodApp extends StatelessWidget {
       title: "Row Chinese",
       debugShowCheckedModeBanner: false,
       theme: Apptheme.lighttheme,
-
       darkTheme: Apptheme.darktheme,
-
       themeMode: ThemeMode.system,
-
-      // home:Provider.of<UserProvider>(context)
-      home: SplashSc(),
-      // AuthScreen(),
+      defaultTransition: Transition.rightToLeftWithFade,
+      transitionDuration: const Duration(milliseconds: 500),
+      home: const A_homeScreen(),
     );
   }
 }

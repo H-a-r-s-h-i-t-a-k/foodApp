@@ -66,6 +66,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '847961340434',
     projectId: 'phonenoproject',
     storageBucket: 'phonenoproject.appspot.com',
+    androidClientId: '847961340434-5nh7297gb6ve2u92b697n71up3o1bos3.apps.googleusercontent.com',
+    iosClientId: '847961340434-mib44njmc96gpo23js05dd7aemh59cco.apps.googleusercontent.com',
     iosBundleId: 'com.example.demo',
   );
 
@@ -75,6 +77,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '847961340434',
     projectId: 'phonenoproject',
     storageBucket: 'phonenoproject.appspot.com',
+    androidClientId: '847961340434-5nh7297gb6ve2u92b697n71up3o1bos3.apps.googleusercontent.com',
+    iosClientId: '847961340434-cq0214bm3i4de7v02j40ju140bui8vih.apps.googleusercontent.com',
     iosBundleId: 'com.example.demo.RunnerTests',
   );
 }

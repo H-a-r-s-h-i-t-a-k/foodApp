@@ -1,8 +1,10 @@
+import 'package:demo/src/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class TOutlineBtn {
   static OutlinedButtonThemeData loutlinetheme = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
+      side: const BorderSide(width: 1, color: Color.fromARGB(255, 34, 32, 32)),
       textStyle: TextStyle(color: Colors.black),
       padding: EdgeInsets.all(18),
       elevation: 2.4,
@@ -16,6 +18,8 @@ class TOutlineBtn {
   );
   static OutlinedButtonThemeData doutlinetheme = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
+      side: const BorderSide(width: 1, color: Colors.white),
+      foregroundColor: Colors.white, surfaceTintColor: Colors.white,
       padding: EdgeInsets.all(18),
       // textStyle: TextStyle(color: Colors.black),
       elevation: 2.4,

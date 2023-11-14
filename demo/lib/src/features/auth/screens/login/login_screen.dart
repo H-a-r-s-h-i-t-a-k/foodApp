@@ -1,5 +1,4 @@
 import 'package:demo/src/constants/image_str.dart';
-import 'package:demo/src/constants/sizes.dart';
 import 'package:demo/src/constants/text_str.dart';
 import 'package:demo/src/features/auth/screens/login/widget/loginfooter.dart';
 import 'package:demo/src/features/auth/screens/login/widget/loginform.dart';
@@ -19,15 +18,16 @@ class loginScreen extends StatelessWidget {
             child: Container(
           padding: EdgeInsets.symmetric(vertical: 30, horizontal: 60),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               HeaderForm(
                 size: size,
+                mheight: 0.19,
                 title: mLoginPagetitle,
                 subtitle: mLoginSubPagetitle,
                 img: mWelcomeimg,
               ),
-              LoginForm(),
+              const LoginForm(),
               LoginFooter(sizeh: size)
             ],
           ),
