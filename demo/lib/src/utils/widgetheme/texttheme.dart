@@ -16,6 +16,7 @@ class ttextTheme {
     displayMedium: GoogleFonts.montserrat(
         color: Colors.black87, fontWeight: FontWeight.bold),
   );
+  //dark them
   static TextTheme dtexttheme = TextTheme(
     headlineMedium: GoogleFonts.poppins(
       color: const Color.fromARGB(221, 255, 255, 255),
