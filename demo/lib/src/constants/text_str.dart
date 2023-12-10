@@ -2,16 +2,16 @@ import 'dart:core';
 
 import 'package:flutter/material.dart';
 
-const String mAppName = "Food App";
+const String mAppName = "FoodieBookin";
 const String mAppTagline = "Esat and West this Dish is The best. ";
 
-const String mLoginPagetitle = " Food App";
+const String mLoginPagetitle = "FoodieBookin";
 const String mLoginSubPagetitle = "Savor the Best of Chinese Cuisine";
 
-const String mSignUpPagetitle = " Food App";
+const String mSignUpPagetitle = " FoodieBookin";
 const String mSignUPSubPagetitle = "Savor the Best of Chinese Cuisine";
 
-const String mWelcomeTitle = "Delisious Food App ";
+const String mWelcomeTitle = "Delisious FoodieBookin";
 const String mWelcomeSubTitle =
     " Let's Savor Authentic Chinese Flavors with Every Bite: Your Ultimate Food Adventure!";
 
