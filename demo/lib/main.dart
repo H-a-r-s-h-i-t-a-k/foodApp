@@ -14,7 +14,7 @@ import 'src/features/cart/controlers/blocs/cart_event.dart';
 
 Gradient lgradiant = RadialGradient(
   radius: 3.0,
-  // focalRadius: 4.0,
+ 
   colors: [
     Color.fromARGB(255, 253, 253, 253),
     Color.fromARGB(255, 6, 230, 246),
