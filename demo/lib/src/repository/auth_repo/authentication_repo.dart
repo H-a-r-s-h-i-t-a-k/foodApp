@@ -1,7 +1,7 @@
 import 'package:demo/src/features/auth/screens/signin/signin_screen.dart';
 import 'package:demo/src/features/auth/screens/splash/splash.dart';
 import 'package:demo/src/features/auth/screens/start/Ascreen.dart';
-import 'package:demo/src/features/home/screen/home/home.dart';
+import 'package:demo/src/features/home/screen/home/Bottom.dart';
 import 'package:demo/src/repository/auth_repo/expections/signup_email_password.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
@@ -22,7 +22,7 @@ class AuthenticationRepo extends GetxController {
   }
 
   _setInitialScreen(User? user1) async {
-    user1 == null ? Get.to(() => SplashSc()) : Get.offAll(() => HomeScreen());
+    user1 == null ? Get.to(() => SplashSc()) : Get.offAll(() => BottomScreen());
   }
 
   Future<void> phoneAuthentication(String phoneNo) async {
@@ -59,7 +59,7 @@ class AuthenticationRepo extends GetxController {
       await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
       firebaseUser.value != null
-          ? Get.offAll(() => const HomeScreen())
+          ? Get.offAll(() => const BottomScreen())
           : Get.offAll(() => SigninScreen());
     } on FirebaseAuthException catch (e) {
       final ex = SignUpWithEmailAndPasswordFailure.code(e.code);

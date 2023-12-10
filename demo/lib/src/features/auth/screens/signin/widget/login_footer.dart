@@ -1,4 +1,7 @@
+import 'package:demo/src/features/auth/screens/login/login_screen.dart';
+import 'package:demo/src/features/auth/screens/signin/signin_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../../constants/image_str.dart';
 import '../../../../../constants/sizes.dart';
@@ -55,7 +58,9 @@ class SigninFooter extends StatelessWidget {
           ),
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Get.to(() => loginScreen());
+          },
           child: Text.rich(
             TextSpan(
               children: [

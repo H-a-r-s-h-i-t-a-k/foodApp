@@ -1,6 +1,6 @@
 import 'package:demo/src/constants/sizes.dart';
 import 'package:demo/src/features/auth/screens/forgotpassword/choice_f/bottomSheet_forgot.dart';
-import 'package:demo/src/features/home/screen/home/home.dart';
+import 'package:demo/src/features/home/screen/home/Bottom.dart';
 import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';
 import 'package:get/route_manager.dart';

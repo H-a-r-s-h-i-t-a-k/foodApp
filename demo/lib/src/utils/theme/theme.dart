@@ -1,4 +1,5 @@
 import 'package:demo/main.dart';
+import 'package:demo/src/constants/colors.dart';
 import 'package:demo/src/utils/widgetheme/elevatedbtn.dart';
 import 'package:demo/src/utils/widgetheme/outlinebtn.dart';
 import 'package:demo/src/utils/widgetheme/texttheme.dart';
@@ -24,6 +25,9 @@ class Apptheme {
       backgroundColor: dColorScheme.primary.withOpacity(0.7),
       foregroundColor: dColorScheme.primaryContainer.withOpacity(0.9),
     ),
+    bottomAppBarTheme: BottomAppBarTheme(
+      color: mPrimaryColor,
+    ),
     outlinedButtonTheme: TOutlineBtn.doutlinetheme,
     elevatedButtonTheme: TElevatedbtn.delevattheme,
     textTheme: ttextTheme.dtexttheme,
@@ -43,6 +47,9 @@ class Apptheme {
         vertical: 8,
         horizontal: 10,
       ),
+    ),
+    bottomAppBarTheme: BottomAppBarTheme(
+      color: Colors.black,
     ),
     outlinedButtonTheme: TOutlineBtn.loutlinetheme,
     elevatedButtonTheme: TElevatedbtn.lelevattheme,

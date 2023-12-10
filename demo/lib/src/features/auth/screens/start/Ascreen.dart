@@ -24,7 +24,7 @@ class _AuthScreenState extends State<AuthScreen> {
     final controller = Get.put(UpwardAnimationController());
     controller.startAuthAnimate();
 
-    var isDark = MediaQuery.of(context).platformBrightness == Brightness.dark;
+    final isDark = MediaQuery.of(context).platformBrightness == Brightness.dark;
     var height = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: isDark ? mDarkColor : Colors.white,

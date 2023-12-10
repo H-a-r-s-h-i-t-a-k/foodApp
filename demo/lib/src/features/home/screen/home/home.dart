@@ -1,42 +1,41 @@
-import 'package:demo/src/constants/sizes.dart';
-import 'package:demo/src/constants/text_str.dart';
-import 'package:demo/src/features/payment/screen/pyscreen.dart';
-import 'package:demo/src/repository/auth_repo/authentication_repo.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:demo/src/features/home/screen/Product/model/productmodel.dart';
+import 'package:demo/src/features/home/screen/category/model/hcategory.dart';
+import 'package:demo/src/features/home/screen/home/widget/nameOfproduct.dart';
+import 'package:demo/src/features/home/screen/home/widget/productCarousel.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
+import 'widget/categ.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    return SafeArea(
-      child: Scaffold(
-        drawer: Drawer(),
-        appBar: AppBar(
-          leadingWidth: size.width * 0.2,
-          leading: Icon(
-            Icons.menu,
-            size: 40,
-            color: Colors.black,
-          ),
-          centerTitle: true,
-          title: Text(mAppName, style: Theme.of(context).textTheme.titleLarge),
-          elevation: 0,
-          backgroundColor: Colors.transparent,
-        ),
-        body: SingleChildScrollView(
-            child: Container(
-          padding: const EdgeInsets.all(mDashboardPadding),
-          child: ElevatedButton(
-              onPressed: () {
-                Get.to(() => const Pyscreen());
-                // AuthenticationRepo.instance.logout();
-              },
-              child:
-                  GestureDetector(onTap: () {}, child: Text("hello google"))),
-        )),
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Container(
+              child: CarouselSlider(
+            options: CarouselOptions(
+              aspectRatio: 1.5,
+              enlargeCenterPage: true,
+              scrollDirection: Axis.vertical,
+              // autoPlay: true,
+            ),
+            items: Category.categories
+                .map((category) => ImagCategory(category: category))
+                .toList(),
+          )),
+          NamingOfProduct(name: "Momos..."),
+          // ProductOne(product: Product.products[0]),
+          ProductCarousel(products: Product.products),
+
+          NamingOfProduct(name: "Noodles..."),
+          // ProductOne(product: Product.products[0]),
+
+          ProductCarousel(products: Product.products),
+        ],
       ),
     );
   }

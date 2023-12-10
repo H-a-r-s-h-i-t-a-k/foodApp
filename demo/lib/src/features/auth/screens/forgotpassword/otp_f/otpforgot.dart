@@ -35,7 +35,7 @@ class OtpScreen extends StatelessWidget {
                 height: mDefaultSize * 2,
               ),
               Text(
-                "$motpMessage abc@gmail.com",
+                "$motpMessage $mPhoneNo",
                 style: Theme.of(context).textTheme.titleSmall,
                 textAlign: TextAlign.center,
               ),

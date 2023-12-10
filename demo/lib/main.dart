@@ -1,13 +1,16 @@
 import 'package:demo/firebase_options.dart';
-import 'package:demo/src/Adminfeatures/ahome/ahome.dart';
 import 'package:demo/src/features/auth/screens/splash/splash.dart';
-import 'package:demo/src/features/home/screen/home/home.dart';
+import 'package:demo/src/features/cart/controlers/blocs/cart_bloc.dart';
+import 'package:demo/src/features/home/screen/home/Bottom.dart';
 import 'package:demo/src/repository/auth_repo/authentication_repo.dart';
 import 'package:demo/src/utils/theme/theme.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
+
+import 'src/features/cart/controlers/blocs/cart_event.dart';
 
 Gradient lgradiant = RadialGradient(
   radius: 3.0,
@@ -53,15 +56,18 @@ class FoodApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      title: "Row Chinese",
-      debugShowCheckedModeBanner: false,
-      theme: Apptheme.lighttheme,
-      darkTheme: Apptheme.darktheme,
-      themeMode: ThemeMode.system,
-      defaultTransition: Transition.rightToLeftWithFade,
-      transitionDuration: const Duration(milliseconds: 500),
-      home: const A_homeScreen(),
+    return BlocProvider(
+      create: (context) => CartBloc()..add(CartStarted()),
+      child: GetMaterialApp(
+        title: "Row Chinese",
+        debugShowCheckedModeBanner: false,
+        theme: Apptheme.lighttheme,
+        darkTheme: Apptheme.darktheme,
+        themeMode: ThemeMode.system,
+        transitionDuration: const Duration(milliseconds: 500),
+        home: BottomScreen(),
+        // CircularProgressIndicator(),
+      ),
     );
   }
 }
