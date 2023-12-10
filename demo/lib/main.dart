@@ -56,6 +56,7 @@ class FoodApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    //state manage blocprovider
     return BlocProvider(
       create: (context) => CartBloc()..add(CartStarted()),
       child: GetMaterialApp(
