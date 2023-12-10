@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ttextTheme {
+  //light theme 
   static TextTheme ltexttheme = TextTheme(
     titleSmall: GoogleFonts.poppins(color: Color.fromARGB(208, 49, 29, 8)),
     labelSmall: GoogleFonts.poppins(color: Colors.black54),
