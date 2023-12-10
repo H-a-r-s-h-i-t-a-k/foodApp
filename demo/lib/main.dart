@@ -25,7 +25,7 @@ Gradient lgradiant = RadialGradient(
 );
 Gradient dgradiant = RadialGradient(
   radius: 3.0,
-  // focalRadius: 4.0,
+ 
   colors: [
     Color.fromARGB(134, 2, 120, 126),
     Color.fromARGB(255, 191, 188, 188),
