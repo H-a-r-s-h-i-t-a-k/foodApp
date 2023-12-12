@@ -6,7 +6,7 @@ class ProductScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text("data"),
+      // child: Text("data"),
     );
   }
 }
