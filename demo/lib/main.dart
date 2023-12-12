@@ -12,28 +12,28 @@ import 'package:get/route_manager.dart';
 
 import 'src/features/cart/controlers/blocs/cart_event.dart';
 
-Gradient lgradiant = RadialGradient(
-  radius: 3.0,
- 
-  colors: [
-    Color.fromARGB(255, 253, 253, 253),
-    Color.fromARGB(255, 6, 230, 246),
-    Color.fromARGB(255, 0, 0, 0)
-  ],
-
-  stops: [0.0, 0.4, 1.0],
-);
-// Gradient dgradiant = RadialGradient(
+// Gradient lgradiant = RadialGradient(
 //   radius: 3.0,
  
 //   colors: [
-//     Color.fromARGB(134, 2, 120, 126),
-//     Color.fromARGB(255, 191, 188, 188),
-//     Color.fromARGB(157, 0, 0, 0),
+//     Color.fromARGB(255, 253, 253, 253),
+//     Color.fromARGB(255, 6, 230, 246),
+//     Color.fromARGB(255, 0, 0, 0)
 //   ],
 
-//   stops: [0.0, 0.7, 1.0],
+//   stops: [0.0, 0.4, 1.0],
 // );
+Gradient dgradiant = RadialGradient(
+  radius: 3.0,
+ 
+  colors: [
+    Color.fromARGB(134, 2, 120, 126),
+    Color.fromARGB(255, 191, 188, 188),
+    Color.fromARGB(157, 0, 0, 0),
+  ],
+
+  stops: [0.0, 0.7, 1.0],
+);
 final ColorScheme lColorScheme = ColorScheme.fromSwatch(
     primarySwatch: Colors.blue, brightness: Brightness.light);
 final ColorScheme dColorScheme = ColorScheme.fromSwatch(
