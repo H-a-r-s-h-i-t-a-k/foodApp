@@ -23,17 +23,17 @@ Gradient lgradiant = RadialGradient(
 
   stops: [0.0, 0.4, 1.0],
 );
-Gradient dgradiant = RadialGradient(
-  radius: 3.0,
+// Gradient dgradiant = RadialGradient(
+//   radius: 3.0,
  
-  colors: [
-    Color.fromARGB(134, 2, 120, 126),
-    Color.fromARGB(255, 191, 188, 188),
-    Color.fromARGB(157, 0, 0, 0),
-  ],
+//   colors: [
+//     Color.fromARGB(134, 2, 120, 126),
+//     Color.fromARGB(255, 191, 188, 188),
+//     Color.fromARGB(157, 0, 0, 0),
+//   ],
 
-  stops: [0.0, 0.7, 1.0],
-);
+//   stops: [0.0, 0.7, 1.0],
+// );
 final ColorScheme lColorScheme = ColorScheme.fromSwatch(
     primarySwatch: Colors.blue, brightness: Brightness.light);
 final ColorScheme dColorScheme = ColorScheme.fromSwatch(
@@ -67,6 +67,7 @@ class FoodApp extends StatelessWidget {
         themeMode: ThemeMode.system,
         transitionDuration: const Duration(milliseconds: 500),
         home: BottomScreen(),
+        //Home screen
         // CircularProgressIndicator(),
       ),
     );
